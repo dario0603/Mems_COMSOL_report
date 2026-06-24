@@ -1,0 +1,71 @@
+\documentclass[a4paper,twocolumn,10pt]{article}
+
+% --- Useful packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lipsum} % dummy text
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=blue,filecolor=blue]{hyperref}
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\usepackage{cleveref}
+
+\addbibresource{references.bib}
+
+% Page margins
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2cm,
+  right=2cm
+}
+
+% Column spacing
+\setlength{\columnsep}{0.7cm}
+
+% Optional vertical line between columns
+%\setlength{\columnseprule}{0.4pt}
+
+\title{Multiphysics analysis and comparison of MEMS Capacitive Microphone}
+\author{Dario Aliberti}
+\date{}
+
+\begin{document}
+
+\twocolumn[
+\maketitle
+\begin{abstract}
+In this report, two different types of capacitive microphones will be compared, both designed with the goal of reducing the effect of air viscosity between the diaphragm membrane and the bottom plate of the structure. \\
+The goal of the analysis is not to evaluate the advantages of these two structures, but only to compare the micromechanical characteristics of the membranes without considering air viscosity. \\
+The simulations were performed using \textbf{COMSOL Multiphysics 6.4}.
+
+\end{abstract}
+\vspace{1cm}
+]
+
+\section{Introduction}
+\input{chapter/introduction.tex}
+
+\section{Analyzed MEMS capacitive microphone structures}
+\input{chapter/description.tex}
+
+\section{Model Geometry in COMSOL}
+\input{chapter/COMSOL_struct.tex}
+
+\section{Definition of Physical Models in COMSOL}
+\input{chapter/COMSOL_physics.tex}
+
+\section{Analysis of Simulation Results}
+\input{chapter/COMSOL_result.tex}
+
+\section{Conclusions}
+\input{chapter/conclusions.tex}
+
+\nocite{*}
+\printbibliography
+
+\end{document}
